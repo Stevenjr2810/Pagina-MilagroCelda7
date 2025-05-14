@@ -1,70 +1,99 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/card.astro";
 ---
+
 <Layout>
   <section id="simbolos" class="px-10 py-20">
-    <h2 class="text-white text-3xl text-center md:text-5xl font-bold mb-20" data-aos="fade-up">Símbolos y Emociones</h2>
+    <h2
+      class="text-white text-3xl text-center md:text-5xl font-bold mb-20"
+      data-aos="fade-up"
+    >
+      Símbolos y Emociones
+    </h2>
 
     <div class="grid gap-10 grid-cols-1 md:grid-cols-2 justify-items-center">
-      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up">
-        <Card 
-          image="/cordero.jpg"
+      <div
+        class="transition-transform duration-300 transform hover:scale-105"
+        data-aos="zoom-in-up"
+      >
+        <Card
+          image="/cordero.png"
           title="El Cordero"
-          description="Representa la inocencia de Memo. Este animal acompaña simbólicamente la pureza de su alma, contrastando con la violencia del mundo que lo rodea."
+          description="<ul class='list-disc pl-5 text-left space-y-1'><li><strong>Denotativo:</strong> Un cordero que aparece junto a Memo.</li><li><strong>Connotativo:</strong> Fragilidad, mansedumbre, pureza.</li><li><strong>Simbólico:</strong> Representa la inocencia absoluta de Memo frente a un mundo violento e injusto.</li></ul>"
         />
       </div>
 
-      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="100">
-        <Card 
-          image="/uniforme.jpg"
+      <div
+        class="transition-transform duration-300 transform hover:scale-105"
+        data-aos="zoom-in-up"
+        data-aos-delay="100"
+      >
+        <Card
+          image="/uniforme.png"
           title="El Uniforme Escolar"
-          description="Evoca el deseo de normalidad y rutina de Ova, mientras su mundo se desmorona. Es un símbolo de la infancia que trata de mantenerse intacta."
+          description="<ul class='list-disc pl-5 text-left space-y-1'><li><strong>Denotativo:</strong> Ropa de colegio usada por Ova.</li><li><strong>Connotativo:</strong> Rutina, infancia, esperanza de normalidad.</li><li><strong>Simbólico:</strong> La resistencia de la inocencia infantil frente a la tragedia.</li></ul>"
         />
       </div>
 
-      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="200">
-        <Card 
-          image="/pan.jpg"
+      <div
+        class="transition-transform duration-300 transform hover:scale-105"
+        data-aos="zoom-in-up"
+        data-aos-delay="200"
+      >
+        <Card
+          image="/pan.png"
           title="El Pan Compartido"
-          description="Acto simple que representa la solidaridad y la humanidad entre los prisioneros, rompiendo la barrera de prejuicio y miedo hacia Memo."
+          description="<ul class='list-disc pl-5 text-left space-y-1'><li><strong>Denotativo:</strong> Los presos comparten pan con Memo.</li><li><strong>Connotativo:</strong> Acto de empatía, generosidad.</li><li><strong>Simbólico:</strong> Inicio de la transformación emocional del encierro; la humanidad se abre paso entre la desconfianza.</li></ul>"
         />
       </div>
 
-      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="300">
-        <Card 
-          image="/hoa.jpg"
+      <div
+        class="transition-transform duration-300 transform hover:scale-105"
+        data-aos="zoom-in-up"
+        data-aos-delay="300"
+      >
+        <Card
+          image="/hoja.png"
           title="La Hoja de Árbol"
-          description="Simboliza la esperanza y la conexión con la vida exterior. Ova entrega la hoja como un puente emocional hacia su padre."
+          description="<ul class='list-disc pl-5 text-left space-y-1'><li><strong>Denotativo:</strong> Ova entrega una hoja a su padre.</li><li><strong>Connotativo:</strong> Vínculo afectivo, ternura, vida natural.</li><li><strong>Simbólico:</strong> Esperanza de libertad; puente emocional entre padre e hija.</li></ul>"
         />
       </div>
 
-      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="400">
-        <Card 
-          image="/lluvia.jpg"
-          title="La Lluvia"
-          description="Presente en momentos de clímax emocional, la lluvia acompaña escenas de pérdida, revelación y reencuentro, reflejando el estado anímico de los personajes."
+      <div
+        class="transition-transform duration-300 transform hover:scale-105"
+        data-aos="zoom-in-up"
+        data-aos-delay="400"
+      >
+        <Card
+          image="/militar.png"
+          title="El Uniforme Militar y la Autoridad"
+          description="<ul class='list-disc pl-5 text-left space-y-1'><li><strong>Denotativo:</strong> Uniformes, desfiles, tonos de mando.</li><li><strong>Connotativo:</strong> Autoritarismo, rigidez, represión.</li><li><strong>Simbólico:</strong> El Estado opresor, la ley como instrumento de injusticia.</li></ul>"
         />
       </div>
 
-      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="500">
-        <Card 
-          image="/celda.jpg"
+      <div
+        class="transition-transform duration-300 transform hover:scale-105"
+        data-aos="zoom-in-up"
+        data-aos-delay="500"
+      >
+        <Card
+          image="/celda.png"
           title="La Celda 7"
-          description="Más que una prisión, se convierte en el espacio donde florecen la empatía, la hermandad y la redención. Es el núcleo de la transformación emocional de la historia."
+          description="<ul class='list-disc pl-5 text-left space-y-1'><li><strong>Denotativo:</strong> Espacio físico de reclusión.</li><li><strong>Connotativo:</strong> Castigo, encierro, aislamiento.</li><li><strong>Simbólico:</strong> Lugar de redención y fraternidad; allí nace una familia inesperada y un milagro emocional.</li></ul>"
         />
       </div>
     </div>
   </section>
 
   <script>
-    import AOS from 'aos';
-    import 'aos/dist/aos.css';
+    import AOS from "aos";
+    import "aos/dist/aos.css";
 
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener("DOMContentLoaded", () => {
       AOS.init({
         duration: 1000,
-        easing: 'ease-in-out',
+        easing: "ease-in-out",
         once: true,
       });
     });
