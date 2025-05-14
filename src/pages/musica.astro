@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AudioCard from "../components/audiocard.jsx";
+---
+
+<Layout>
+    <section class="px-10 py-20 flex flex-col items-center gap-16" id="musica">
+        <h2 class="text-4xl font-bold text-white mb-10 text-center" data-aos="fade-up">
+            Banda Sonora del Alma
+        </h2>
+
+        <div data-aos="fade-up" data-aos-delay="100">
+            <AudioCard
+                client:load
+                src="/audio/yolcu.mp3"
+                title="Yolcu – Hasan Özsüt"
+                description="Refleja el viaje emocional de Memo, desde el encierro hasta la aceptación, con una melodía constante y melancólica."
+            />
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200">
+            <AudioCard
+                client:load
+                src="/audio/main.mp3"
+                title="Main Theme – Miracle in Cell No. 7"
+                description="Melodía central que transmite la inocencia y redención de Memo, haciendo que el espectador se sienta emocionalmente unido a su historia."
+            />
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300">
+            <AudioCard
+                client:load
+                src="/audio/ova-theme.mp3"
+                title="Ova (Emotional Theme)"
+                description="Tema tierno y profundo que simboliza el vínculo indestructible entre Memo y su hija Ova, a pesar del dolor y la distancia."
+            />
+        </div>
+    </section>
+
+    <script>
+        import AOS from 'aos';
+        import 'aos/dist/aos.css';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+            });
+        });
+    </script>
+</Layout>

@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/card.astro';
+---
+<Layout>
+  <section id="simbolos" class="px-10 py-20">
+    <h2 class="text-white text-3xl text-center md:text-5xl font-bold mb-20" data-aos="fade-up">Símbolos y Emociones</h2>
+
+    <div class="grid gap-10 grid-cols-1 md:grid-cols-2 justify-items-center">
+      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up">
+        <Card 
+          image="cordero.jpg"
+          title="El Cordero"
+          description="Representa la inocencia de Memo. Este animal acompaña simbólicamente la pureza de su alma, contrastando con la violencia del mundo que lo rodea."
+        />
+      </div>
+
+      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="100">
+        <Card 
+          image="uniforme.jpg"
+          title="El Uniforme Escolar"
+          description="Evoca el deseo de normalidad y rutina de Ova, mientras su mundo se desmorona. Es un símbolo de la infancia que trata de mantenerse intacta."
+        />
+      </div>
+
+      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="200">
+        <Card 
+          image="pan.jpg"
+          title="El Pan Compartido"
+          description="Acto simple que representa la solidaridad y la humanidad entre los prisioneros, rompiendo la barrera de prejuicio y miedo hacia Memo."
+        />
+      </div>
+
+      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="300">
+        <Card 
+          image="hoa.jpg"
+          title="La Hoja de Árbol"
+          description="Simboliza la esperanza y la conexión con la vida exterior. Ova entrega la hoja como un puente emocional hacia su padre."
+        />
+      </div>
+
+      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="400">
+        <Card 
+          image="lluvia.jpg"
+          title="La Lluvia"
+          description="Presente en momentos de clímax emocional, la lluvia acompaña escenas de pérdida, revelación y reencuentro, reflejando el estado anímico de los personajes."
+        />
+      </div>
+
+      <div class="transition-transform duration-300 transform hover:scale-105" data-aos="zoom-in-up" data-aos-delay="500">
+        <Card 
+          image="celda.jpg"
+          title="La Celda 7"
+          description="Más que una prisión, se convierte en el espacio donde florecen la empatía, la hermandad y la redención. Es el núcleo de la transformación emocional de la historia."
+        />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+      });
+    });
+  </script>
+</Layout>

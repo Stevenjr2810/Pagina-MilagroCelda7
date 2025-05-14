@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<section id="inicio" class="w-full h-[60vh] relative overflow-hidden" data-aos="fade-in">
+		<img
+			src="/banner.jpg"
+			alt="Banner Memo y Ova"
+			class="w-full h-full object-cover"
+		/>
+
+		<!-- Capa de difuminado inferior -->
+		<div
+			class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-neutral-950 to-transparent z-10"
+		>
+		</div>
+
+		<!-- Contenido alineado a la izquierda -->
+		<div class="absolute left-0 top-[40%] z-20 px-10 space-y-4" data-aos="fade-up" data-aos-delay="200">
+			<h1 class="text-white text-4xl md:text-6xl font-bold">
+				Milagro en la Celda 7
+			</h1>
+			<h2
+				class="text-white text-base md:text-lg font-medium tracking-wide"
+			>
+				<span>2019</span>
+				<span class="text-red-500 mx-2">|</span>
+				<span>Drama</span>
+				<span class="text-red-500 mx-2">|</span>
+				<span>132 min</span>
+			</h2>
+		</div>
+	</section>
+
+	<!-- Sección de sinopsis -->
+	<section class="px-10 py-12" data-aos="fade-up">
+		<div class="max-w-6xl mx-auto">
+			<p class="text-white text-xl leading-loose font-akzidenz">
+				La historia transcurre en los años 80, durante el golpe de
+				estado. Memo es un pastor con una deficiencia mental pero vive
+				feliz en su pequeño mundo. Vive con su amada hija y la abuela en
+				una ciudad del Egeo. En 1983, cuando Memo está incriminado por
+				el asesinato de la hija del comandante, su vida se derrumba. Lo
+				condenan a pena de muerte y lo encierran en la séptima celda.
+				Allí tiene pocas posibilidades de mantenerse con vida. Los
+				reclusos lo tratan con odio hasta que se dan cuenta de que tiene
+				un corazón de oro. Están convencidos de que Memo no puede ser un
+				asesino. Con el tiempo, todos a los que Memo ayudó se movilizan
+				para salvar su vida. Mientras todos buscan justicia, Memo y su
+				hija Ova sueñan con volver a reunirse. Memo es inocente, pero
+				ahora necesita un milagro para poder volver a su antigua vida.
+			</p>
+		</div>
+	</section>
+	<!-- Sección de información -->
+	<section class="text-white px-10 py-16 font-akzidenz" data-aos="fade-up" data-aos-delay="300">
+		<div
+			class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 border-t border-gray-700 pt-10"
+		>
+			<!-- Columna izquierda -->
+			<div class="space-y-6">
+				<div>
+					<h3 class="font-semibold">Título Original</h3>
+					<p>7. Koğuştaki Mucize</p>
+				</div>
+
+				<div>
+					<h3 class="font-semibold">Director</h3>
+					<p>Mehmet Ada Öztekin</p>
+				</div>
+
+				<div>
+					<h3 class="font-semibold">Reparto</h3>
+					<p>Aras Bulut Iynemli</p>
+					<p>Nisa Sofiya Aksongur</p>
+					<p>Ilker Aksum</p>
+					<p>Mesut Akusta</p>
+				</div>
+
+				<div>
+					<h3 class="font-semibold">Año</h3>
+					<p>2019</p>
+				</div>
+			</div>
+
+			<!-- Columna derecha -->
+			<div class="space-y-6 md:border-l md:pl-12 border-gray-700">
+				<div>
+					<h3 class="font-semibold">Casa De Producción</h3>
+					<p>Lanistar Medya</p>
+				</div>
+
+				<div>
+					<h3 class="font-semibold">Género</h3>
+					<p>Drama</p>
+				</div>
+
+				<div>
+					<h3 class="font-semibold">Duración</h3>
+					<p>132 minutos disponible en HD</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		import AOS from 'aos';
+		import 'aos/dist/aos.css';
+
+		document.addEventListener('DOMContentLoaded', () => {
+			AOS.init({
+				duration: 1000,
+				easing: 'ease-in-out',
+				once: true,
+			});
+		});
+	</script>
+</Layout>
+

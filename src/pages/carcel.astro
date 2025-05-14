@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="px-10 py-40 space-y-64" id="carcel">
+    <!-- Día 1: Efecto de zoom y fade -->
+    <div class="min-h-screen max-w-3xl mx-auto flex flex-col justify-center items-center text-white transform transition-all"
+         data-aos="zoom-in-up" 
+         data-aos-duration="1000" 
+         data-aos-offset="300">
+      <img src="/dia1.png" alt="Prisión Día 1" class="w-full  object-cover rounded-lg mb-6">
+      <h2 class="text-4xl font-bold mb-6 text-center">Día 1: El Encierro</h2>
+      <p class="text-lg leading-relaxed text-center">Memo es encerrado injustamente por un crimen que no cometió. Al ingresar a la prisión, su confusión es profunda. No entiende por qué lo detienen, ni por qué todos a su alrededor lo observan con miedo o desprecio. El silencio de los muros es tan fuerte como la soledad en su corazón. Cada rincón oscuro se siente como una amenaza, y cada paso que da lo hunde más en una realidad que no logra entender.</p>
+    </div>
+
+    <!-- Día 5: Efecto de flip -->
+    <div class="min-h-screen max-w-3xl mx-auto flex flex-col justify-center items-center text-white"
+         data-aos="flip-left" 
+         data-aos-duration="1200" 
+         data-aos-delay="100" 
+         data-aos-offset="250">
+      <img src="/dia5.png" alt="Prisión Día 5" class="w-full object-cover rounded-lg mb-6">
+      <h2 class="text-4xl font-bold mb-6 text-center">Día 5: El Rechazo</h2>
+      <p class="text-lg leading-relaxed text-center">Los demás reclusos lo rechazan y lo agreden. Memo, con su inocencia intacta, no logra comprender el odio que lo rodea. Para ellos es un monstruo. Para él, simplemente es una pesadilla sin sentido. El miedo comienza a instalarse en su mirada. Las noches se vuelven eternas y los días un campo minado de miradas hostiles.</p>
+    </div>
+
+    <!-- Día 10: Efecto de slide desde la derecha -->
+    <div class="min-h-screen max-w-3xl mx-auto flex flex-col justify-center items-center text-white"
+         data-aos="fade-left" 
+         data-aos-duration="1000" 
+         data-aos-delay="150" 
+         data-aos-offset="250">
+      <img src="/dia10.png" alt="Prisión Día 10" class="w-full  object-cover rounded-lg mb-6">
+      <h2 class="text-4xl font-bold mb-6 text-center">Día 10: El Pan</h2>
+      <p class="text-lg leading-relaxed text-center">Un gesto simple cambia todo. Uno de los presos comparte su comida con Memo. Por primera vez, alguien ve más allá del prejuicio. Es el inicio de una conexión humana que le devuelve un atisbo de esperanza. Memo responde con una sonrisa tímida que abre el primer puente hacia la comprensión mutua.</p>
+    </div>
+
+    <!-- Día 15: Efecto de escala -->
+    <div class="min-h-screen max-w-3xl mx-auto flex flex-col justify-center items-center text-white"
+         data-aos="zoom-in" 
+         data-aos-duration="1200" 
+         data-aos-delay="200" 
+         data-aos-offset="250">
+      <img src="/dia15.png" alt="Prisión Día 15" class="w-full  object-cover rounded-lg mb-6">
+      <h2 class="text-4xl font-bold mb-6 text-center">Día 15: La Carta</h2>
+      <p class="text-lg leading-relaxed text-center">Memo recibe una carta de Ova. Su hija lo ama y lo espera. La carta se convierte en su fuerza, su motor. Sus compañeros la leen con él. Por primera vez, lloran juntos. La celda deja de ser una prisión: se vuelve un refugio. En esas palabras infantiles hay más verdad y justicia que en todo el sistema que lo condenó.</p>
+    </div>
+
+    <!-- Día 20: Efecto de slide desde la izquierda -->
+    <div class="min-h-screen max-w-3xl mx-auto flex flex-col justify-center items-center text-white"
+         data-aos="fade-right" 
+         data-aos-duration="1000" 
+         data-aos-delay="250" 
+         data-aos-offset="250">
+      <img src="/dia20.png" alt="Prisión Día 20" class="w-full  object-cover rounded-lg mb-6">
+      <h2 class="text-4xl font-bold mb-6 text-center">Día 20: Hermandad</h2>
+      <p class="text-lg leading-relaxed text-center">Memo ya no está solo. Los reclusos lo cuidan, lo protegen. Le creen. Entienden que no es un asesino, sino un padre con un corazón puro. En la Celda 7, nace una familia improvisada, tejida con respeto y compasión. Lo que antes eran enemigos, ahora son hermanos.</p>
+    </div>
+
+    <!-- Día 30: Efecto de aparecer con mayor intensidad -->
+    <div class="min-h-screen max-w-3xl mx-auto flex flex-col justify-center items-center text-white"
+         data-aos="zoom-in-up" 
+         data-aos-duration="1500" 
+         data-aos-delay="300" 
+         data-aos-offset="250">
+      <img src="/dia30.png" alt="Prisión Día 30" class="w-full  object-cover rounded-lg mb-6">
+      <h2 class="text-4xl font-bold mb-6 text-center text-yellow-300">Día 30: El Milagro</h2>
+      <p class="text-lg leading-relaxed text-center">La injusticia es evidente. Todos lo saben. Sus compañeros hacen lo imposible por ayudarlo. Lo que ocurre después no es solo una acción, es un milagro silencioso: el amor vence al sistema, y Memo vuelve a ver la luz, aunque el mundo no cambie del todo. La esperanza, alimentada por actos pequeños pero valientes, se convierte en una llama imposible de apagar.</p>
+    </div>
+  </section>
+
+  <script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-out-cubic',
+        once: false,
+        mirror: true,
+        anchorPlacement: 'top-bottom',
+      });
+    });
+  </script>
+</Layout>
+

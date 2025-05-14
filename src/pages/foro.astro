@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section id="foro" class="px-10 py-20 bg-gray-900">
+    <h2 class="text-white text-3xl text-center md:text-5xl font-bold mb-10" data-aos="fade-up">
+      Foro de Opiniones
+    </h2>
+
+    <div class="max-w-2xl mx-auto bg-gray-900 border border-gray-800 p-6 rounded-lg shadow-xl" 
+         data-aos="fade-up" data-aos-delay="100">
+
+      <form id="commentForm" class="space-y-4">
+        <div>
+          <label for="name" class="block mb-2 text-md font-medium text-white">
+            Tu Nombre
+          </label>
+          <input 
+            type="text" 
+            id="name" 
+            placeholder="Escribe tu nombre aquí"
+            class="bg-gray-800 border border-gray-700 text-white text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
+            required
+          >
+        </div>
+
+        <div>
+          <label for="comment" class="block mb-2 text-md font-medium text-white">
+            Tu Opinión
+          </label>
+          <textarea 
+            id="comment" 
+            rows="4" 
+            placeholder="Comparte tu opinión sobre la película"
+            class="bg-gray-800 border border-gray-700 text-white text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
+            required
+          ></textarea>
+        </div>
+
+        <div class="mt-6">
+          <button 
+            type="submit" 
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+          >
+            Publicar Comentario
+          </button>
+        </div>
+
+        <div class="mt-10"></div>
+      </form>
+
+      <div class="my-12 border-t border-gray-800"></div>
+
+      <h3 class="text-xl font-bold text-white mb-6">Opiniones sobre "Milagro en la celda 7"</h3>
+
+      <div id="commentsSection" class="space-y-6">
+        <div class="p-4 bg-gray-800 rounded-lg">
+          <strong class="text-white block mb-1">Carlos</strong>
+          <p class="text-gray-300">Me encantó la película.</p>
+        </div>
+
+        <div class="p-4 bg-gray-800 rounded-lg">
+          <strong class="text-white block mb-1">Juliana Martínez</strong>
+          <p class="text-gray-300">Nunca había llorado tanto con una película. La historia de Memo me rompió el alma pero también me llenó de esperanza. ¡Una joya del cine!</p>
+        </div>
+
+        <div class="p-4 bg-gray-800 rounded-lg">
+          <strong class="text-white block mb-1">Luis Delgado</strong>
+          <p class="text-gray-300">Una lección de humanidad. Ver cómo los presos cambiaron al conocer a Memo fue una de las partes más impactantes para mí.</p>
+        </div>
+
+        <div class="p-4 bg-gray-800 rounded-lg">
+          <strong class="text-white block mb-1">Andrea Ríos</strong>
+          <p class="text-gray-300">Me hizo reflexionar sobre la justicia, el amor incondicional y cómo un corazón puro puede cambiarlo todo. Ova y Memo son inolvidables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+      });
+
+      const form = document.getElementById('commentForm');
+      const nameInput = document.getElementById('name');
+      const commentInput = document.getElementById('comment');
+      const commentsSection = document.getElementById('commentsSection');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = nameInput.value.trim();
+        const comment = commentInput.value.trim();
+
+        if (name && comment) {
+          const div = document.createElement('div');
+          div.className = `p-4 bg-gray-800 rounded-lg`;
+          div.innerHTML = `
+            <strong class="text-white block mb-1">${name}</strong>
+            <p class="text-gray-300">${comment}</p>
+          `;
+
+          commentsSection.prepend(div);
+          form.reset();
+        }
+      });
+    });
+  </script>
+</Layout>

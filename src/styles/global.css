@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Akzidenz';
+    src: url('/fonts/4202-font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import "flowbite";
+@import 'aos/dist/aos.css';
+
