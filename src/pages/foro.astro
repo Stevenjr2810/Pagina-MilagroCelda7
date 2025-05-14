@@ -3,14 +3,17 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <section id="foro" class="px-10 py-20 bg-gray-900">
+  <section id="foro" class="px-10 py-20 ">
+    <!-- Título principal del foro -->
     <h2 class="text-white text-3xl text-center md:text-5xl font-bold mb-10" data-aos="fade-up">
       Foro de Opiniones
     </h2>
-
+    
+    <!-- Contenedor principal del foro -->
     <div class="max-w-2xl mx-auto bg-gray-900 border border-gray-800 p-6 rounded-lg shadow-xl" 
          data-aos="fade-up" data-aos-delay="100">
-
+      
+      <!-- Formulario para agregar comentarios -->
       <form id="commentForm" class="space-y-4">
         <div>
           <label for="name" class="block mb-2 text-md font-medium text-white">
@@ -24,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
             required
           >
         </div>
-
+        
         <div>
           <label for="comment" class="block mb-2 text-md font-medium text-white">
             Tu Opinión
@@ -37,42 +40,79 @@ import Layout from '../layouts/Layout.astro';
             required
           ></textarea>
         </div>
-
-        <div class="mt-6">
-          <button 
-            type="submit" 
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
-          >
-            Publicar Comentario
-          </button>
-        </div>
-
-        <div class="mt-10"></div>
+        
+        <button 
+          type="submit" 
+          class="text-white bg-gray-800 hover:bg-gray-700 border border-gray-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        >
+          Publicar Comentario
+        </button>
       </form>
-
-      <div class="my-12 border-t border-gray-800"></div>
-
+      
+      <!-- Línea divisoria estilizada -->
+      <div class="my-8 border-t border-gray-800"></div>
+      
+      <!-- Título de la sección de comentarios -->
       <h3 class="text-xl font-bold text-white mb-6">Opiniones sobre "Milagro en la celda 7"</h3>
-
+      
+      <!-- Sección donde se mostrarán los comentarios -->
       <div id="commentsSection" class="space-y-6">
+        <!-- Comentarios predefinidos sobre "Milagro en la celda 7" -->
         <div class="p-4 bg-gray-800 rounded-lg">
-          <strong class="text-white block mb-1">Carlos</strong>
-          <p class="text-gray-300">Me encantó la película.</p>
+          <div class="flex items-center mb-2">
+            <div class="h-8 w-8 rounded-full bg-purple-700 flex items-center justify-center mr-3">
+              <span class="text-white font-bold">ML</span>
+            </div>
+            <strong class="text-white">María López</strong>
+            <span class="ml-auto text-gray-400 text-sm">5 mayo, 2025</span>
+          </div>
+          <p class="text-gray-300">"Milagro en la celda 7 es una obra maestra que toca el corazón. La historia de amor entre padre e hija es tan conmovedora que me hizo llorar. Definitivamente una de las mejores películas que he visto en mucho tiempo."</p>
+          <div class="mt-3 flex">
+            <span class="text-gray-400 text-sm flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+              24 me gusta
+            </span>
+          </div>
         </div>
-
+        
         <div class="p-4 bg-gray-800 rounded-lg">
-          <strong class="text-white block mb-1">Juliana Martínez</strong>
-          <p class="text-gray-300">Nunca había llorado tanto con una película. La historia de Memo me rompió el alma pero también me llenó de esperanza. ¡Una joya del cine!</p>
+          <div class="flex items-center mb-2">
+            <div class="h-8 w-8 rounded-full bg-blue-700 flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CR</span>
+            </div>
+            <strong class="text-white">Carlos Ramírez</strong>
+            <span class="ml-auto text-gray-400 text-sm">2 mayo, 2025</span>
+          </div>
+          <p class="text-gray-300">"Esta película demuestra el poder de la empatía y la humanidad. La actuación principal es extraordinaria, logra transmitir la inocencia y el amor de manera tan auténtica. No pude contener las lágrimas en varias escenas."</p>
+          <div class="mt-3 flex">
+            <span class="text-gray-400 text-sm flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+              18 me gusta
+            </span>
+          </div>
         </div>
-
+        
         <div class="p-4 bg-gray-800 rounded-lg">
-          <strong class="text-white block mb-1">Luis Delgado</strong>
-          <p class="text-gray-300">Una lección de humanidad. Ver cómo los presos cambiaron al conocer a Memo fue una de las partes más impactantes para mí.</p>
-        </div>
-
-        <div class="p-4 bg-gray-800 rounded-lg">
-          <strong class="text-white block mb-1">Andrea Ríos</strong>
-          <p class="text-gray-300">Me hizo reflexionar sobre la justicia, el amor incondicional y cómo un corazón puro puede cambiarlo todo. Ova y Memo son inolvidables.</p>
+          <div class="flex items-center mb-2">
+            <div class="h-8 w-8 rounded-full bg-pink-700 flex items-center justify-center mr-3">
+              <span class="text-white font-bold">AG</span>
+            </div>
+            <strong class="text-white">Ana González</strong>
+            <span class="ml-auto text-gray-400 text-sm">28 abril, 2025</span>
+          </div>
+          <p class="text-gray-300">"Una historia desgarradora que muestra la injusticia del sistema, pero también la bondad humana. La relación entre padre e hija es simplemente hermosa y el final, aunque triste, tiene un mensaje poderoso sobre el amor incondicional."</p>
+          <div class="mt-3 flex">
+            <span class="text-gray-400 text-sm flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+              32 me gusta
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -81,34 +121,73 @@ import Layout from '../layouts/Layout.astro';
   <script>
     import AOS from 'aos';
     import 'aos/dist/aos.css';
-
+    
     document.addEventListener('DOMContentLoaded', () => {
+      // Inicializar la biblioteca de animaciones AOS
       AOS.init({
         duration: 1000,
         easing: 'ease-in-out',
         once: true,
       });
-
+      
+      // Obtener referencias a los elementos del DOM
       const form = document.getElementById('commentForm');
       const nameInput = document.getElementById('name');
       const commentInput = document.getElementById('comment');
       const commentsSection = document.getElementById('commentsSection');
-
+      
+      // Agregar listener para el evento submit del formulario
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-
+        
+        // Obtener y limpiar los valores ingresados
         const name = nameInput.value.trim();
         const comment = commentInput.value.trim();
-
+        
+        // Verificar que ambos campos tengan contenido
         if (name && comment) {
+          // Crear iniciales para el avatar
+          const initials = name.split(' ')
+            .map(word => word[0])
+            .join('')
+            .substring(0, 2)
+            .toUpperCase();
+          
+          // Crear un color aleatorio para el avatar
+          const avatarColors = ['purple-700', 'blue-700', 'pink-700', 'indigo-700', 'red-700'];
+          const randomColor = avatarColors[Math.floor(Math.random() * avatarColors.length)];
+          
+          // Obtener fecha actual
+          const now = new Date();
+          const options = { day: 'numeric', month: 'long', year: 'numeric' };
+          const dateStr = now.toLocaleDateString('es-ES', options);
+          
+          // Crear un nuevo elemento div para el comentario
           const div = document.createElement('div');
           div.className = `p-4 bg-gray-800 rounded-lg`;
           div.innerHTML = `
-            <strong class="text-white block mb-1">${name}</strong>
+            <div class="flex items-center mb-2">
+              <div class="h-8 w-8 rounded-full bg-${randomColor} flex items-center justify-center mr-3">
+                <span class="text-white font-bold">${initials}</span>
+              </div>
+              <strong class="text-white">${name}</strong>
+              <span class="ml-auto text-gray-400 text-sm">${dateStr}</span>
+            </div>
             <p class="text-gray-300">${comment}</p>
+            <div class="mt-3 flex">
+              <span class="text-gray-400 text-sm flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                </svg>
+                0 me gusta
+              </span>
+            </div>
           `;
-
+          
+          // Agregar el comentario al inicio de la sección
           commentsSection.prepend(div);
+          
+          // Limpiar el formulario
           form.reset();
         }
       });
